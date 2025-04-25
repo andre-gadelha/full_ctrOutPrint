@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, jsonify
 app = Flask(__name__)
 
 #Rota pata testes
-@app.route('/teste')
+@app.route('/')
 def tst():
     return 'testando'
 
@@ -20,8 +20,8 @@ def upload_image():
 #Rota para listar notas de cartuchos
 @app.route('/inicio')
 def ola():
-    return render_template('lista.html', titulo='Controle do Outsoursing')
+    return render_template('lista.html', titulo='Controle do Outsoursing de Impressão')
 
 
 
-app.run() # é possível fazer configurando host e porta da seguinte forma: app.run(host='0.0.0.0', port=8080)
+app.run(debug=True) # é possível fazer configurando host e porta da seguinte forma: app.run(host='0.0.0.0', port=8080)
