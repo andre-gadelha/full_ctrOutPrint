@@ -22,6 +22,5 @@ def upload_image():
 def ola():
     return render_template('lista.html', titulo='Controle do Outsoursing de Impressão')
 
-
-
-app.run(debug=True) # é possível fazer configurando host e porta da seguinte forma: app.run(host='0.0.0.0', port=8080)
+if __name__ == '__main__':
+    app.run(debug=True) # é possível fazer configurando host e porta da seguinte forma: app.run(host='0.0.0.0', port=8080)
